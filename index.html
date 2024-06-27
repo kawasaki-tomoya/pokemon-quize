@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘッダーに画像とタイトルを表示</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./img/pokemon-logo.png" alt="Logo" class="logo">
+        <h1 class="title">ポケモンクイズ</h1>
+    </header>
+    <main>
+        <form action="question.php?question_number=1" method="POST">
+            <label for="userInput"></label>
+            <input type="text" id="userInput" name="userInput" placeholder="ユーザー名を入力" required>
+            <button type="submit">始める</button>
+        </form>
+        <p>過去スコア</p>
+        <table>
+            <tr>
+              <th>順位</th> <th>ユーザー名</th> <th>点数</th>
+            </tr>
+          
+            <tr>
+              <td>1位</td> <td>ともや</td> <td>10点</td>
+            </tr>
+            
+            <tr>
+              <td>2位</td> <td>test2</td> <td>8点</td>
+            </tr>
+          
+            <tr>
+              <td>3位</td> <td>test3</td> <td>5点</td>
+            </tr>
+          
+          </table>
+    </main>
+</body>
+</html>
