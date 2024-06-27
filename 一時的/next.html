@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Next Page</h1>
+    <p id="counter">Loading...</p>
+    <button onclick="previousPage()">Go to Previous Page</button>
+
+    <script>
+        // ページが読み込まれるごとにカウンターを更新する
+        window.onload = function() {
+            // セッションストレージからカウンターの値を取得
+            let counter = sessionStorage.getItem('pageCounter');
+
+            // カウンターが存在しない場合は0に設定
+            if (counter === null) {
+                counter = 0;
+            } else {
+                counter = parseInt(counter);
+            }
+
+            // カウンターを1加算
+            counter += 1;
+
+            // セッションストレージにカウンターの値を保存
+            sessionStorage.setItem('pageCounter', counter);
+
+            // カウンターの値を表示
+            document.getElementById('counter').innerText = `Page views in this session: ${counter}`;
+        };
+
+        // 前のページに遷移する関数
+        function previousPage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

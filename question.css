@@ -1,0 +1,45 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    background-color: #ff0000;
+    padding: 0 20px;
+}
+
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px; /* 画像の幅を50%に設定 */
+    height: auto;
+}
+
+.title {
+    font-size: 24px;
+    color: #1e00fd;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.img1 {
+    filter: brightness(0%);
+    width: 10%; /* 画像の幅を50%に設定 */
+    height: auto; /* アスペクト比を維持して高さを自動調整 */
+    display: block; /* ブロック要素として表示 */
+    margin: 0 auto; /* 中央揃え */
+}
